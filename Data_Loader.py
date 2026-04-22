@@ -387,6 +387,7 @@ def prepare_base_loaders(voc_root, sbd_root=None, fold=0,
         train_ds, batch_size=batch_size, shuffle=True,
         num_workers=num_workers, pin_memory=True,
         worker_init_fn=lambda _: np.random.seed(seed),
+        drop_last=True,
     )
 
     val_loader = None
